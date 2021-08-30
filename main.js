@@ -2,12 +2,12 @@
 /****************************************************************
  Create Page On Load
 ****************************************************************/
-function pickNumberOfTeams() {
-  const pickTeamsHeader = document.createElement('h1')
-  pickTeamsHeader.textContent = 'Select how many teams are in your league';
+function pickLeagueSize() {
+  const leagueSizeHeader = document.createElement('h2')
+  leagueSizeHeader.textContent = 'Select League Size';
 
   const selectTeamsTitle = document.createElement('label');
-  selectTeamsTitle.textContent = 'Select Number Of Players';
+  selectTeamsTitle.textContent = 'Select Number Of Teams';
   selectTeamsTitle.for = 'teams';
 
   const selectTeams = document.createElement('select');
@@ -37,7 +37,7 @@ function pickNumberOfTeams() {
   // Create element to store number of teams element
   const teamsDiv = document.createElement('div');
   teamsDiv.id = 'teams-div';
-  teamsDiv.appendChild(pickTeamsHeader);
+  teamsDiv.appendChild(leagueSizeHeader);
   teamsDiv.appendChild(selectTeamsTitle);
   teamsDiv.appendChild(selectTeams);
   teamsDiv.appendChild(submitTeams);
@@ -47,7 +47,7 @@ function pickNumberOfTeams() {
 }
 
 window.addEventListener('load', () => {
-  pickNumberOfTeams()
+  pickLeagueSize()
 }, false)
 
 
@@ -58,6 +58,9 @@ Create Name Input Section On Submit
 // Create inputs for each team in the league after commissioner submits the number of teams
 function createInput (teams) {
   const nameDiv = document.createElement('div');
+  const nameTitle = document.createElement('h2');
+  nameTitle.textContent = 'List Player Names';
+  nameDiv.appendChild(nameTitle);
   nameDiv.id = 'name-div'
   for(let i = 1; i <= teams; i++) {
     /*
@@ -158,7 +161,7 @@ RESET TOOL
 ****************************************************************************/
 document.addEventListener('click',function(e){
   if(e.target && e.target.id== 'reset'){
-    pickNumberOfTeams();
+    pickLeagueSize();
     const draftDiv = document.getElementById('draft-div');
     document.getElementById('app').removeChild(draftDiv);
 }});
