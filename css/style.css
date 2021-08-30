@@ -33,16 +33,13 @@ html {
 }
 
 h1 {
-  font-size: 3.5rem;  
+  font-size: 2rem;  
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 30px;
-  text-align: center;
-  color: var(--white);
   text-decoration: underline;
 }
 
@@ -72,17 +69,29 @@ li {
 /******************************************
 HEADER
 ******************************************/
-
-body {
+header {
+  background-color: black;
+  color: white;
   display: flex;
-  flex-flow: column;
-  margin: auto 5%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 69px;
 }
 
-#name-div{
+/******************************************
+BODy
+******************************************/
+
+main {
+  padding: 10px;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
 }
+
 
 input {
   border-radius: 2px;
@@ -107,6 +116,24 @@ input {
   text-align: center;
 }
 
+/****************************************
+Select League Size Screen
+****************************************/
+#teams-div{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/****************************************
+Enter Player Names Screen
+****************************************/
+
+#name-div{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 
 /****************************************
 Draft Position Screen
