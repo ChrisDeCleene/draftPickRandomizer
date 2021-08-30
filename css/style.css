@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+#name-div{
+  display: flex;
+  flex-flow: column;
+}
+
+input {
+  border-radius: 2px;
+  padding: 0px 0px 0px 16px;
+  margin: 10px;
+  height: 36px;
+  width: 200px;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.button {
+  height: 36px;
+  width: 200px;
+  background-color: var(--davys-grey);
+  color: var(--white);
+  text-align: center;
+}
+
+
+/****************************************
+Draft Position Screen
+****************************************/
+.player-name {
+  font-size: 32px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px blueviolet;
+}
